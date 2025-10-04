@@ -18,5 +18,7 @@ A **responsive web application** to display semester-wise college routines for K
 - JavaScript  
 
 ---
+Your site is live at   https://sneh777a.github.io/class-routine-project/
+
 
 
