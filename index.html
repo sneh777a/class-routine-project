@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanchrapara College Routine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Top Header -->
+        <header>
+            <h1>KANCHRAPARA COLLEGE ROUTINE</h1>
+            <div class="marquee">SESSION 2023-24</div>
+        </header>
+
+        <!-- Main Section -->
+        <div class="main">
+            <!-- Side Menu -->
+            <aside>
+                <ul>
+                    <li>
+                        2ND SEMESTER ROUTINE
+                        <button onclick="loadPage('pages/sem2.html')">Click</button>
+                    </li>
+                    <li>
+                        4TH SEMESTER ROUTINE
+                        <button onclick="loadPage('pages/sem4.html')">Click</button>
+                    </li>
+                    <li>
+                        6TH SEMESTER ROUTINE
+                        <button onclick="loadPage('pages/sem6.html')">Click</button>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Content Area -->
+            <main id="content">
+                <!-- Default page -->
+                <h2>Welcome to Home</h2>
+                <p>This is the home section. Click buttons on the left to see semester routines.</p>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function loadPage(page) {
+            fetch(page)
+                .then(response => response.text())
+                .then(html => document.getElementById('content').innerHTML = html)
+                .catch(err => console.error('Page load error:', err));
+        }
+    </script>
+</body>
+</html>
