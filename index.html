@@ -51,11 +51,24 @@
 
     <script>
         function loadPage(page) {
-            fetch(page)
-                .then(response => response.text())
-                .then(html => document.getElementById('content').innerHTML = html)
-                .catch(err => console.error('Page load error:', err));
-        }
+    fetch(page)
+        .then(response => response.text())
+        .then(html => document.getElementById('content').innerHTML = html)
+        .catch(err => console.error('Page load error:', err));
+}
+
+// Function to reload default home content
+function loadHome() {
+    document.getElementById('content').innerHTML = `
+        <div class="home-section">
+            <h2>Welcome to Kanchrapara College Routine</h2>
+            <p>This web app is designed to help students easily view semester-wise routines. Click the buttons on the left to navigate through 2nd, 4th, and 6th semester schedules.</p>
+            <img src="images/college.png" alt="College Illustration" class="home-image">
+            <p class="tip">Tip: Use the sidebar buttons to quickly switch between semesters!</p>
+        </div>
+    `;
+}
+
     </script>
 </body>
 </html>
